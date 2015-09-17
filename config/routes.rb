@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :deals
+  root to: "deals#index"
   resources :foodanddrinks, :controller => "deals", :type => "FoodAndDrink"
   resources :beauties, :controller => "deals", :type => "Beauty"
   # The priority is based upon order of creation: first created -> highest priority.

@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20150916070539) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "company"
+    t.string   "company" 
   end
 
 end

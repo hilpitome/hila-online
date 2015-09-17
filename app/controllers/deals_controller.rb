@@ -64,12 +64,15 @@ class DealsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def deal_type
+      params[:type].constantize
+    end
     def set_deal
       @deal = Deal.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deal_params
-      params.require(:deal).permit(:title, :price, :description, :image)
+      params.require(:deal).permit(:title, :price, :description, :company, :type, :image)
     end
 end
